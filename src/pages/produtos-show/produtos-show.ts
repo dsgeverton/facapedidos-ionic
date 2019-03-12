@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { ProdutosProvider } from '../../providers/produtos/produtos';
 
 /**
@@ -19,7 +19,7 @@ export class ProdutosShowPage {
   produtos: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public produtosProvider: ProdutosProvider) {
+    public produtosProvider: ProdutosProvider, public toast: ToastController) {
       this.getProdutos();
   }
 
@@ -34,6 +34,16 @@ export class ProdutosShowPage {
       this.produtos = data;
       console.log(this.produtos);
     });
+  }
+
+  addToCart() {
+    this.toast.create({ message: 'Esta função ainda não funciona', 
+        duration: 3000, 
+        position: 'botton',
+        cssClass: "toast-success",
+        showCloseButton: true,
+        closeButtonText: "OK" 
+      }).present();
   }
 
 }

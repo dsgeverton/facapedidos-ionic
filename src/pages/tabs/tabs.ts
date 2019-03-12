@@ -29,7 +29,6 @@ export class TabsPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProdutosPage');
-    this.getProdutos();
   }
 
   getProdutos() {

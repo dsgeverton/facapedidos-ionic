@@ -6,7 +6,7 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>produtosShow</ion-title>
+    <ion-title>Catalogo</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -22,7 +22,7 @@
            R$ {{p.valor}}
           </p>
         </ion-card-content>
-        <button full ion-button icon-end center round>
+        <button full ion-button icon-end center round (click) ="addToCart()">
             Adicionar ao carrinho
             <ion-icon name="cart"></ion-icon>
           </button>

@@ -61,7 +61,7 @@ export class ProdutosProvider {
   save(produto) {
     let data = JSON.stringify(produto);
     return new Promise((resolve, reject) => { 
-      this.http.post(this.apiUrl, data, { headers: { 'Access-Control-Allow-Origin': '*', 'Accept':'application/json','Content-Type': 'application/json', 'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, PUT' }})
+      this.http.post(this.apiUrl, data, { headers: { 'Content-Type': 'application/json'}})
       .subscribe(res => {
         resolve(res);
         console.log('The result is:'+res);
