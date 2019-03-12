@@ -1,0 +1,39 @@
+<!--
+  Generated template for the ProdutoEditPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Editar Produto</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+
+        <ion-item>
+          <ion-label stacked>Nome</ion-label>
+          <ion-input type="text" name="nome" [(ngModel)]="produto.nome"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Valor</ion-label>
+            <ion-input type="text" name="valor" [(ngModel)]="produto.valor"></ion-input>
+          </ion-item>
+    
+        <ion-item>
+          <ion-label stacked>Quantidade de Produtos</ion-label>
+          <ion-input type="text" name="quantidade" [(ngModel)]="produto.quantidade"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>URL da Imagem</ion-label>
+            <ion-input type="text" name="imageURL" [(ngModel)]="produto.imageURL"></ion-input>
+          </ion-item>
+    
+      </ion-list>
+    
+      <button ion-button block (click)="save()">Salvar</button>
+</ion-content>
