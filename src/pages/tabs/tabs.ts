@@ -6,7 +6,6 @@ import { HomePage } from '../home/home';
 import { ProdutosPage } from '../produtos/produtos';
 import { ProdutosShowPage } from '../produtos-show/produtos-show';
 import { ProdutosProvider } from '../../providers/produtos/produtos';
-import { tokenName } from '@angular/compiler';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -28,7 +27,7 @@ export class TabsPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ProdutosPage');
+    console.log('ionViewDidLoad ProdutosPage Tabs');
   }
 
   getProdutos() {

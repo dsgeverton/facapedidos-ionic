@@ -16,6 +16,7 @@ import { ProdutosProvider } from '../providers/produtos/produtos';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
 import { ProdutosShowPage } from '../pages/produtos-show/produtos-show';
 import { ProdutoEditPage } from '../pages/produto-edit/produto-edit';
+import { CarrinhosProvider } from '../providers/carrinhos/carrinhos';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ProdutoEditPage } from '../pages/produto-edit/produto-edit';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ProdutosProvider
+    ProdutosProvider,
+    CarrinhosProvider
   ]
 })
 export class AppModule {}

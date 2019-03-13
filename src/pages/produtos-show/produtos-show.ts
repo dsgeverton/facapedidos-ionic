@@ -28,6 +28,10 @@ export class ProdutosShowPage {
     this.getProdutos();
   }
 
+  ionViewDidEnter(){
+    this.getProdutos();
+  }
+
   getProdutos() {
     this.produtosProvider.findAll()
     .then(data => {
