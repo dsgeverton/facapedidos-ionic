@@ -37,12 +37,10 @@ export class ProdutoEditPage {
   save() {
     this.produtosProvider.save(this.produto)
       .then(() => {
-        this.toast.create({ message: 'Produto salvo com sucesso.', 
+        this.loading = this.toast.create({ message: 'Produto salvo com sucesso.', 
         duration: 3000, 
         position: 'botton',
-        cssClass: "toast-success",
-        showCloseButton: true,
-        closeButtonText: "OK" 
+        cssClass: "toast-success"
       }).present();
         this.navCtrl.pop();
       })
@@ -50,9 +48,7 @@ export class ProdutoEditPage {
         this.toast.create({ message: 'Erro ao salvar o produto.', 
         duration: 3000, 
         position: 'botton',
-        cssClass: "toast-fail",
-        showCloseButton: true,
-        closeButtonText: "OK" }).present();
+        cssClass: "toast-fail"}).present();
       });
   }
 
