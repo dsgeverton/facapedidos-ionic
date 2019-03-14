@@ -6,6 +6,7 @@ import { HomePage } from '../home/home';
 import { ProdutosPage } from '../produtos/produtos';
 import { ProdutosShowPage } from '../produtos-show/produtos-show';
 import { ProdutosProvider } from '../../providers/produtos/produtos';
+import { CarrinhoPage } from '../carrinho/carrinho';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -20,6 +21,7 @@ export class TabsPage {
   tab3Root = ContactPage;
   tab4Root = ProdutosPage;
   tab5Root = ProdutosShowPage;
+  tab6Root = CarrinhoPage;
   qtdProdutos = 0;
 
   constructor(public produtosProvider:ProdutosProvider) {

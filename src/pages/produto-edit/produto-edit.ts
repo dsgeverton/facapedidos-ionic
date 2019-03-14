@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { ProdutosProvider, Produto } from '../../providers/produtos/produtos';
 
 /**
@@ -19,7 +19,7 @@ export class ProdutoEditPage {
   produto: Produto;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,  public toast: ToastController,
-    private produtosProvider:ProdutosProvider, private _loadingCtrl: LoadingController) {
+    private produtosProvider:ProdutosProvider) {
       this.produto = new Produto();
 
       if (this.navParams.data.id) {
@@ -37,7 +37,7 @@ export class ProdutoEditPage {
   save() {
     this.produtosProvider.save(this.produto)
       .then(() => {
-        this.loading = this.toast.create({ message: 'Produto salvo com sucesso.', 
+        this.toast.create({ message: 'Produto salvo com sucesso.', 
         duration: 3000, 
         position: 'botton',
         cssClass: "toast-success"
@@ -51,23 +51,5 @@ export class ProdutoEditPage {
         cssClass: "toast-fail"}).present();
       });
   }
-
-  loading;
-
-showLoading() {
-    if(!this.loading){
-        this.loading = this._loadingCtrl.create({
-            content: 'Please Wait...'
-        });
-        this.loading.present();
-    }
-}
-
-dismissLoading(){
-    if(this.loading){
-        this.loading.dismiss();
-        this.loading = null;
-    }
-}
 
 }

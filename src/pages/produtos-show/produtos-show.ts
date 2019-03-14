@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { ProdutosProvider } from '../../providers/produtos/produtos';
+import { CarrinhoPage } from '../carrinho/carrinho';
 
 /**
  * Generated class for the ProdutosShowPage page.
@@ -48,6 +49,8 @@ export class ProdutosShowPage {
         showCloseButton: true,
         closeButtonText: "OK" 
       }).present();
+  
+      this.navCtrl.push(CarrinhoPage);
   }
 
 }

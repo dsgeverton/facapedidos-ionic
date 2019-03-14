@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController, Tabs, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController} from 'ionic-angular';
 import { ProdutosProvider } from '../../providers/produtos/produtos';
 import { ProdutoEditPage } from '../produto-edit/produto-edit';
 
@@ -20,8 +20,7 @@ export class ProdutosPage {
   produtos: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public produtosProvider: ProdutosProvider, private toast: ToastController,
-    private _loadingCtrl: LoadingController) {
+    public produtosProvider: ProdutosProvider, private toast: ToastController) {
       this.getProdutos();
   }
 
@@ -56,23 +55,5 @@ export class ProdutosPage {
   addProduto() {
     this.navCtrl.push(ProdutoEditPage);
   }
-
-  loading;
-
-showLoading() {
-    if(!this.loading){
-        this.loading = this._loadingCtrl.create({
-            content: 'Please Wait...'
-        });
-        this.loading.present();
-    }
-}
-
-dismissLoading(){
-    if(this.loading){
-        this.loading.dismiss();
-        this.loading = null;
-    }
-}
 
 }

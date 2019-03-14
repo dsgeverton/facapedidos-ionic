@@ -17,6 +17,7 @@ import { HttpClientModule } from '../../node_modules/@angular/common/http';
 import { ProdutosShowPage } from '../pages/produtos-show/produtos-show';
 import { ProdutoEditPage } from '../pages/produto-edit/produto-edit';
 import { CarrinhosProvider } from '../providers/carrinhos/carrinhos';
+import { CarrinhoPage } from '../pages/carrinho/carrinho';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { CarrinhosProvider } from '../providers/carrinhos/carrinhos';
     ProdutoEditPage,
     ProdutosPage,
     ProdutosShowPage,
+    CarrinhoPage,
     TabsPage
   ],
   imports: [
@@ -41,6 +43,7 @@ import { CarrinhosProvider } from '../providers/carrinhos/carrinhos';
     ProdutosPage,
     ProdutoEditPage,
     ProdutosShowPage,
+    CarrinhoPage,
     ContactPage,
     HomePage,
     TabsPage
