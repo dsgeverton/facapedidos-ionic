@@ -10,7 +10,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ProdutosProvider {
 
-  apiUrl = 'http://localhost:8080/api/produtos/';
+  apiUrl = 'http://192.168.1.6:8080/api/produtos/';
   produtos: any;
   headers: {'Access-Control-Allow-Origin': '*', 'Accept':'application/json','Content-Type': 'application/json', 'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, PUT'};
 

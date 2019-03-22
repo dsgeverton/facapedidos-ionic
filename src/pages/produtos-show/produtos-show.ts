@@ -21,7 +21,6 @@ export class ProdutosShowPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public produtosProvider: ProdutosProvider, public toast: ToastController) {
-      this.getProdutos();
   }
 
   ionViewDidLoad() {
@@ -51,6 +50,15 @@ export class ProdutosShowPage {
       }).present();
   
       this.navCtrl.push(CarrinhoPage);
+  }
+
+  doRefresh(refresher) {
+    console.log('Begin async operation', refresher);
+    this.getProdutos();
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      refresher.complete();
+    }, 2000);
   }
 
 }

@@ -21,7 +21,6 @@ export class ProdutosPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public produtosProvider: ProdutosProvider, private toast: ToastController) {
-      this.getProdutos();
   }
 
   ionViewDidLoad() {
